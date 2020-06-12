@@ -7,14 +7,14 @@ import java.util.UUID;
 public class Hamburger {
 
     private final UUID id;
-    private final String name;
+    private final String menuName;
     private String description;
     private double price;
 
-    public Hamburger(@JsonProperty("id")UUID id, @JsonProperty("name")String name,
+    public Hamburger(@JsonProperty("id")UUID id, @JsonProperty("menuName")String menuName,
                      @JsonProperty("description") String description, @JsonProperty("price")double price) {
         this.id = id;
-        this.name = name;
+        this.menuName = menuName;
         this.description = description;
         this.price = price;
     }
@@ -23,8 +23,8 @@ public class Hamburger {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getMenuName() {
+        return menuName;
     }
 
     public String getDescription() {
@@ -39,7 +39,7 @@ public class Hamburger {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 }
